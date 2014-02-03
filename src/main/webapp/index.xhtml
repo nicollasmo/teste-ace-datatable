@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:ice="http://www.icesoft.com/icefaces/component">
+    <h:head>
+        <title>Teste ACE Datatable</title>
+    </h:head>
+    <h:body>
+        <ice:form>
+            <ace:dataTable value="#{testeBean.idiomas}"
+                           var="idioma"
+                           paginator="true"
+                           paginatorPosition="bottom"
+                           rows="10">
+                <ace:column headerText="Código" sortBy="#{idioma.codigo}">
+                    <ice:outputText value="#{idioma.codigo}"/>
+                </ace:column>
+                <ace:column headerText="Descrição" sortBy="#{idioma.descricao}">
+                    <ice:outputText value="#{idioma.descricao}"/>
+                </ace:column>
+            </ace:dataTable>
+        </ice:form>
+    </h:body>
+</html>
+
